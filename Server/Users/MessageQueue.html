@@ -1,0 +1,18 @@
+<template name="MessageQueue">
+    <li>Unread Messages({{MessagesUnAnswered}})</li>
+    <div class="addMessage">
+        <form class="pure-form pure-form-stacked" id="addMessageForm">
+            Opponent Name:
+            <!--<input id="opponentNameTxt" type="text">-->
+            <select id="messageToText">
+                {{#each user}}
+                    {{#unless isCurrentUser _id}}
+                        <option>{{username}}</option>
+                    {{/unless}}
+                {{/each}}
+            </select>
+            <input id="addMessageBtn" type="submit" class="pure-button pure-button-primary">
+            <p id="addMessageError"></p>
+        </form>
+    </div>
+</template>

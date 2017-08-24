@@ -1,0 +1,123 @@
+/* CSS declarations go here */
+
+
+
+/*Leaderboard stuff*/
+
+/*.selected{*/
+    /*background-color: yellow;*/
+/*}*/
+
+
+/*ADD RESULT*/
+#addResultBtn
+{
+    margin-right: 73%;
+    width: 25%;
+}
+
+#addResultDiv label
+{
+    /*margin-left: auto;*/
+    margin-right: 95%;
+    width: 30%;
+    text-align: left;
+}
+#addResultDiv select
+{
+    line-height: normal;
+    padding: 5px 5px;
+}
+#addResultDiv input
+{
+    position: relative;
+    border-spacing: 1px;
+    width: 21%;
+    text-align: center;
+    font: 95% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+    /*border: 1px solid black;*/
+}
+#registrationDiv
+{
+    margin: 0 auto;
+    width: 250px;
+}
+/*LEADER BOARDS*/
+#leaderBoardHeader
+{
+    margin-right: 95%;
+    width: 30%;
+    text-align: center;
+    color: #ccc;
+    background-color: #333333;
+    font: 120% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+#personalBoardHeader
+{
+    margin-right: 95%;
+    width: 30%;
+    text-align: center;
+    color: #ccc;
+    background-color: #333333;
+    font: 120% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+#leaderBoardDiv
+{
+    position: relative;
+    /*border-spacing: 1px;*/
+    /*width: 20%;*/
+    text-align: center;
+    border: 1px #333;
+    margin-right: 10%;
+    margin-left: 10%;
+    font: 80% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+
+#leaderBoardTable, #personalBoardTable
+{
+    /*position: absolute;*/
+    border: 1px #333;
+    border-spacing: 1px;
+    left: 50%;
+    font: 100% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+table tr:nth-child(even) {
+    background-color: #333;
+    color: #ccc;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table tr:hover
+{
+    background-color: #2580a2;
+}
+table#leaderBoardTable tr::selection
+{
+    background-color: #2580a2;
+}
+table tr.active {background: yellow;}
+
+table
+{
+    text-align: center;
+}
+
+#loginForm
+{
+    width: 250px;
+    margin: 0 auto;
+}
+#cssmenu
+{
+    float: left;
+}
+.tooltip {
+    z-index: auto;
+    font-weight: 500;
+    max-width: 200px;
+    text-align: center;
+    font-size: 18px;
+    transition: opacity 0.1s ease-out;
+    background-color: #2580a2;
+}

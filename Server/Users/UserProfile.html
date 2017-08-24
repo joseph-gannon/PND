@@ -1,0 +1,18 @@
+<template name="UserProfile">
+    <h4>User Profile</h4>
+    {{#with currentUser}}
+        <p>Current User: {{username}}</p>
+        <li><a href="#" class="home">Home</a></li>
+        {{#with profile}}
+            <li>Rating: {{rating}}</li>
+            <li>Wins: {{playerWins}}</li>
+            <li>Losses: {{playerLoses}}</li>
+        {{/with}}
+    {{/with}}
+    <li>CurrentWins: {{currentWins}}</li>
+    <li><a href="#" class="logout">Logout</a></li>
+    {{> MatchesTable}}
+    <!--{{> MessageQueue}}-->
+</template>
+
+

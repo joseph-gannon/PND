@@ -1,0 +1,60 @@
+<head>
+  <title>pongndong</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <!--{{> login}}-->
+    <!--{{> loginButtons}}-->
+    <!--{{> register}}-->
+    <!--{{> leaderBoard}}-->
+    <!--{{> addPlayerForm}}-->
+</body>
+<template name="login">
+    <form class="pure-form pure-form-aligned" id="loginForm">
+        <p>Email: <input type="email" name="email" class="pure-input-rounded" style="width: 100%"></p>
+        <p>Password: <input type="password" class="pure-input-rounded" name="password" style="width: 100%"></p>
+        <p><input id="loginBtn" type="submit" value="Login"  class="pure-button pure-button-primary" style="width: 100%"></p>
+        <p align="center">Or</p>
+        <!--<p><input id="registerBtn" type="submit" value="Register"  class="pure-button pure-button-primary" style="width: 100%" onclick="location.href='register';"></p>-->
+    </form>
+    {{> register}}
+</template>
+
+<template name="addPlayerForm">
+    {{#if currentUser}}
+        <div class="addPlayerDiv">
+            <form class="pure-form pure-form-stacked" id="addPlayerForm">
+                Player Name:
+                <input id="playerNameTxt" type="text">
+                Games Played:
+                <input id="gamesPlayedTxt" type="text">
+                <input id="addPlayerBtn" type="submit" value="Add Player" class="pure-button pure-button-primary">
+                <p id="addPlayerError"></p>
+            </form>
+        </div>
+    {{/if}}
+</template>
+
+<template name="main">
+
+        <h1 align="center">
+        <img class="pure-img" src="/images/dongers.png" alt="dongers" width="100px" height="50px" style="float: left">
+        Welcome to Pong N' Dong!</h1>
+    {{#if currentUser}}
+        <div>
+            {{> Sidebar}}
+            {{> yield}}
+        </div>
+        <hr />
+    {{else}}
+        {{> login}}
+        <p>Mah Footer</p>
+    {{/if}}
+</template>
+
