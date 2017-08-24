@@ -4,6 +4,7 @@
 if (Meteor.isServer)
 {
     Meteor.startup(function() {
+        process.env.MONGO_URL = 'mongodb://heroku_lmkgf49q:mtc3ckmal0cjl47gsacdn4fp4i@ds149329.mlab.com:49329/heroku_lmkgf49q';
         console.log("All UserData Publish");
         Meteor.publish("allUserData", function () {
             //return Meteor.users.find({}, {fields: {"emails.address": 1}});
